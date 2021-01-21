@@ -1,0 +1,105 @@
+{% extends '_Foundation.jinja2' %}
+
+{% macro createToolCard(_obj) -%}
+    <div class="col pb-3">
+        <a href="{{ _obj.get('url') }}" target="_self">
+            <div class="card bigger-card">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center align-self-center text-center">
+                        <div class="col">
+                            <h4 id="toolName">{{ _obj.get('name') }}</h4>
+                            <h6>iOS:
+                                <span class="text-muted">{{ _obj.get('minIOS') }}</span> -
+                                <span class="text-muted">{{ _obj.get('maxIOS') }}</span>
+                            </h6>
+                            <h6>Processor Range:
+                                <span class="text-muted">{{ _obj.get('minProc') }}</span> -
+                                <span class="text-muted">{{ _obj.get('maxProc') }}</span>
+                            </h6>
+                            <div data-bs-toggle="tooltip" data-bs-placement="bottom" title="Supported Operating Systems">
+                                {% for platform in _obj.platforms %}
+                                {% set fpath= 'img/' + platform + '.png' %}
+                                <span class="text-muted p-1">
+                                        <img src="{{ url_for('static', filename=fpath) }}" width="20", height="20">
+                                    </span>
+                            {% endfor %}
+                            </div>
+                            <div>
+                                {% if _obj.get('type') == 'Semi-Untethered' %}
+                                    <span class="badge bg-success" data-bs-toggle="tooltip" data-bs-placement="top" title="You can re-jailbreak on device without a PC after a reboot, as long as the app remains signed!">Semi Untethered</span>
+                                {% elif _obj.get('type') == 'Semi-Tethered' %}
+                                    <span class="badge bg-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="You NEED a PC to re-jailbreak after a reboot!">Semi Tethered</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+{%- endmacro %}
+
+
+{% block content %}
+    <div class="container min-vh-100">
+        <div class="row pt-2 pb-3">
+            <div class="col">
+                <h2>Welcome!</h2>
+                <p>
+                    This service aims to be a reliable source for you to find the appropriate Jailbreak for your iPhone, iPod or iPad.<br>
+                    Use the card below to find a Jailbreak based on your current device specs (iOS version, device, processor)
+                    or feel free to browse the sections below.<br>
+                    <br>
+                    This service is free of charge and will always remain free and updated.
+                </p>
+            </div>
+        </div>
+        <div class="row pt-3 pb-5">
+            <div class="col">
+                <a href="{{ url_for('HomeBP.guide_me') }}" target="_self">
+                    <div class="card">
+                        <div class="card-body d-flex align-items-center align-self-center">
+                            <h3>Help Me Jailbreak!</h3>
+                            <div class="mb-1 p-2 position-absolute end-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-right" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2F4F4F" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M4 9h8v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <h2 class="pb-3">iOS 14 Jailbreaks</h2>
+        <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {% for tool in tools14 %}
+                {{ createToolCard(tool) }}
+            {% endfor %}
+        </div>
+        <h2 class="pb-3">iOS 13 Jailbreaks</h2>
+        <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {% for tool in tools13 %}
+                {{ createToolCard(tool) }}
+            {% endfor %}
+        </div>
+        <h2 class="pb-3">iOS 12 Jailbreaks</h2>
+        <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {% for tool in tools12 %}
+                {{ createToolCard(tool) }}
+            {% endfor %}
+        </div>
+        <h2 class="pb-3">iOS 11 Jailbreaks</h2>
+        <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {% for tool in tools11 %}
+                {{ createToolCard(tool) }}
+            {% endfor %}
+        </div>
+        <h2 class="pb-3">iOS 10 Jailbreaks</h2>
+        <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {% for tool in tools10 %}
+                {{ createToolCard(tool) }}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
