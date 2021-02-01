@@ -1,0 +1,298 @@
+{% extends '_Foundation.jinja2' %}
+
+{% macro createToolCard(_obj) -%}
+    <div class="col pb-3">
+        <a href="{{ _obj.get('url') }}" target="_self">
+            <div class="card bigger-card">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center align-self-center text-center">
+                        <div class="col">
+                            <h4 id="toolName">{{ _obj.get('name') }}</h4>
+                            <h6>iOS:
+                                <span class="text-muted">{{ _obj.get('minIOS') }}</span> -
+                                <span class="text-muted">{{ _obj.get('maxIOS') }}</span>
+                            </h6>
+                            <h6 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Range of supported iPhones including their variants (Plus, Pro, Max)">iPhones Supported:
+                                <span class="text-muted">{{ _obj.get('minProc') }}</span> ➞
+                                <span class="text-muted">{{ _obj.get('maxProc') }}</span>
+                            </h6>
+                            <div data-bs-toggle="tooltip" data-bs-placement="bottom" title="Supported Operating Systems">
+                                {% for platform in _obj.platforms %}
+                                {% set fpath= 'img/' + platform + '.png' %}
+                                <span class="text-muted p-1">
+                                        <img src="{{ url_for('static', filename=fpath) }}" width="20", height="20">
+                                    </span>
+                            {% endfor %}
+                            </div>
+                            <div>
+                                {% if _obj.get('type') == 'Semi-Untethered' %}
+                                    <span class="badge bg-success" data-bs-toggle="tooltip" data-bs-placement="top" title="You can re-jailbreak on device without a PC after a reboot, as long as the app remains signed!">Semi Untethered</span>
+                                {% elif _obj.get('type') == 'Semi-Tethered' %}
+                                    <span class="badge bg-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="You NEED a PC to re-jailbreak after a reboot!">Semi Tethered</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+{%- endmacro %}
+
+
+{% block content %}
+    <div class="container min-vh-100">
+        <div class="row pt-2 pb-3">
+            <div class="col">
+                <h2>Jailbreak Wizard</h2>
+                <p>
+                    Find a suitable Jailbreak based on your device specifications.<br>
+                    <i>
+                        Invalid data will result in false positive results!<br>
+                        (e.g. picking an invalid iOS version for a device: iPhone 4S running iOS 13.5)
+                    </i>
+                </p>
+            </div>
+        </div>
+        {% if showFieldError %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Holy papaya!</strong> Something went wrong, check your fields!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %}
+        <div class="row pt-3 pb-5">
+            <div class="col">
+                <form enctype="multipart/form-data" method="post" action="{{ url_for('HomeBP.guide_me') }}">
+                    <div class="pb-3">
+                        <!-- iPhone Selector -->
+                        <label for="devicePicker">Select your iDevice</label>
+                        <select id="devicePicker" name="devicePicker" class="form-select">
+                            <option value="2G-iPhone 2G">iPhone 2G</option>
+                            <option value="3G-iPhone 3G">iPhone 3G</option>
+                            <option value="3GS-iPhone 3GS">iPhone 3GS</option>
+                            <option value="4-iPhone 4">iPhone 4</option>
+                            <option value="4S-iPhone 4S">iPhone 4S</option>
+                            <option value="5-iPhone 5">iPhone 5</option>
+                            <option value="5-iPhone 5C">iPhone 5C</option>
+                            <option value="5S-iPhone 5S" selected>iPhone 5S</option>
+                            <option value="6-iPhone 6">iPhone 6</option>
+                            <option value="6-iPhone 6 Plus">iPhone 6 Plus</option>
+                            <option value="6S-iPhone 6S">iPhone 6S</option>
+                            <option value="6S-iPhone 6S Plus">iPhone 6S Plus</option>
+                            <option value="6S-iPhone SE 1">iPhone SE (1.Generation)</option>
+                            <option value="7-iPhone 7">iPhone 7</option>
+                            <option value="7-iPhone 7 Plus">iPhone 7 Plus</option>
+                            <option value="8-iPhone 8">iPhone 8</option>
+                            <option value="8-iPhone 8 Plus">iPhone 8 Plus</option>
+                            <option value="X--iPhone X">iPhone X</option>
+                            <option value="XS-iPhone XR">iPhone XR</option>
+                            <option value="XS-iPhone XS">iPhone XS</option>
+                            <option value="XS-iPhone XS Max">iPhone XS Max</option>
+                            <option value="11-iPhone 11">iPhone 11</option>
+                            <option value="11-iPhone 11 Pro">iPhone 11 Pro</option>
+                            <option value="11-iPhone 11 Pro Max">iPhone 11 Pro Max</option>
+                            <option value="11-iPhone SE 2">iPhone SE (2.Generation)</option>
+                            <option value="12-iPhone 12 Mini">iPhone 12 Mini</option>
+                            <option value="12-iPhone 12">iPhone 12 </option>
+                            <option value="12-iPhone 12 Pro">iPhone 12 Pro</option>
+                            <option value="12-iPhone 12 Pro Max">iPhone 12 Pro Max</option>
+                        </select>
+                    </div>
+                    <div class="pb-3">
+                        <!-- iOS Selector -->
+                        <label for="deviceIOS">Select the iOS running on it</label>
+                        <select id="deviceIOS" name="deviceIOS" class="form-select">
+                            <option value="1.0">1.0</option>
+                            <option value="1.0.1">1.0.1</option>
+                            <option value="1.0.2">1.0.2</option>
+                            <option value="1.1">1.1</option>
+                            <option value="1.1.1">1.1.1</option>
+                            <option value="1.1.2">1.1.2</option>
+                            <option value="1.1.3">1.1.3</option>
+                            <option value="1.1.4">1.1.4</option>
+                            <option value="1.1.5">1.1.5</option>
+                            <option value="2.0">2.0</option>
+                            <option value="2.0.1">2.0.1</option>
+                            <option value="2.0.2">2.0.2</option>
+                            <option value="2.1">2.1</option>
+                            <option value="2.1.1">2.1.1</option>
+                            <option value="2.2">2.2</option>
+                            <option value="2.2.1">2.2.1</option>
+                            <option value="3.0">3.0</option>
+                            <option value="3.0.1">3.0.1</option>
+                            <option value="3.1">3.1</option>
+                            <option value="3.1.1">3.1.1</option>
+                            <option value="3.1.2">3.1.2</option>
+                            <option value="3.1.3">3.1.3</option>
+                            <option value="3.2">3.2</option>
+                            <option value="3.2.1">3.2.1</option>
+                            <option value="3.2.2">3.2.2</option>
+                            <option value="4.0">4.0</option>
+                            <option value="4.0.1">4.0.1</option>
+                            <option value="4.0.2">4.0.2</option>
+                            <option value="4.1">4.1</option>
+                            <option value="4.2.1">4.2.1</option>
+                            <option value="4.2.5">4.2.5</option>
+                            <option value="4.2.6">4.2.6</option>
+                            <option value="4.2.7">4.2.7</option>
+                            <option value="4.2.8">4.2.8</option>
+                            <option value="4.2.9">4.2.9</option>
+                            <option value="4.2.10">4.2.10</option>
+                            <option value="4.3">4.3</option>
+                            <option value="4.3.1">4.3.1</option>
+                            <option value="4.3.2">4.3.2</option>
+                            <option value="4.3.3">4.3.3</option>
+                            <option value="4.3.4">4.3.4</option>
+                            <option value="4.3.5">4.3.5</option>
+                            <option value="5.0">5.0</option>
+                            <option value="5.0.1">5.0.1</option>
+                            <option value="5.1">5.1</option>
+                            <option value="5.1.1">5.1.1</option>
+                            <option value="6.0">6.0</option>
+                            <option value="6.0.1">6.0.1</option>
+                            <option value="6.0.2">6.0.2</option>
+                            <option value="6.1">6.1</option>
+                            <option value="6.1.1">6.1.1</option>
+                            <option value="6.1.2">6.1.2</option>
+                            <option value="6.1.3">6.1.3</option>
+                            <option value="6.1.4">6.1.4</option>
+                            <option value="6.1.5">6.1.5</option>
+                            <option value="6.1.6">6.1.6</option>
+                            <option value="7.0" selected>7.0</option>
+                            <option value="7.0.1">7.0.1</option>
+                            <option value="7.0.2">7.0.2</option>
+                            <option value="7.0.3">7.0.3</option>
+                            <option value="7.0.4">7.0.4</option>
+                            <option value="7.0.5">7.0.5</option>
+                            <option value="7.0.6">7.0.6</option>
+                            <option value="7.1">7.1</option>
+                            <option value="7.1.1">7.1.1</option>
+                            <option value="7.1.2">7.1.2</option>
+                            <option value="8.0">8.0</option>
+                            <option value="8.0.1">8.0.1</option>
+                            <option value="8.0.2">8.0.2</option>
+                            <option value="8.1">8.1</option>
+                            <option value="8.1.1">8.1.1</option>
+                            <option value="8.1.2">8.1.2</option>
+                            <option value="8.1.3">8.1.3</option>
+                            <option value="8.2">8.2</option>
+                            <option value="8.3">8.3</option>
+                            <option value="8.4">8.4</option>
+                            <option value="8.4.1">8.4.1</option>
+                            <option value="9.0">9.0</option>
+                            <option value="9.0.1">9.0.1</option>
+                            <option value="9.0.2">9.0.2</option>
+                            <option value="9.1">9.1</option>
+                            <option value="9.2">9.2</option>
+                            <option value="9.2.1">9.2.1</option>
+                            <option value="9.3">9.3</option>
+                            <option value="9.3.1">9.3.1</option>
+                            <option value="9.3.2">9.3.2</option>
+                            <option value="9.3.3">9.3.3</option>
+                            <option value="9.3.4">9.3.4</option>
+                            <option value="9.3.5">9.3.5</option>
+                            <option value="9.3.6">9.3.6</option>
+                            <option value="10.0">10.0</option>
+                            <option value="10.0.1">10.0.1</option>
+                            <option value="10.0.2">10.0.2</option>
+                            <option value="10.0.3">10.0.3</option>
+                            <option value="10.1">10.1</option>
+                            <option value="10.1.1">10.1.1</option>
+                            <option value="10.2">10.2</option>
+                            <option value="10.2.1">10.2.1</option>
+                            <option value="10.3">10.3</option>
+                            <option value="10.3.1">10.3.1</option>
+                            <option value="10.3.2">10.3.2</option>
+                            <option value="10.3.3">10.3.3</option>
+                            <option value="10.3.4">10.3.4</option>
+                            <option value="11.0">11.0</option>
+                            <option value="11.0.1">11.0.1</option>
+                            <option value="11.0.2">11.0.2</option>
+                            <option value="11.0.3">11.0.3</option>
+                            <option value="11.1">11.1</option>
+                            <option value="11.1.1">11.1.1</option>
+                            <option value="11.1.2">11.1.2</option>
+                            <option value="11.2">11.2</option>
+                            <option value="11.2.1">11.2.1</option>
+                            <option value="11.2.2">11.2.2</option>
+                            <option value="11.2.3">11.2.3</option>
+                            <option value="11.2.4">11.2.4</option>
+                            <option value="11.2.5">11.2.5</option>
+                            <option value="11.2.6">11.2.6</option>
+                            <option value="11.3">11.3</option>
+                            <option value="11.3.1">11.3.1</option>
+                            <option value="11.4">11.4</option>
+                            <option value="11.4.1">11.4.1</option>
+                            <option value="12.0">12.0</option>
+                            <option value="12.0.1">12.0.1</option>
+                            <option value="12.1">12.1</option>
+                            <option value="12.1.1">12.1.1</option>
+                            <option value="12.1.2">12.1.2</option>
+                            <option value="12.1.3">12.1.3</option>
+                            <option value="12.1.4">12.1.4</option>
+                            <option value="12.2">12.2</option>
+                            <option value="12.3">12.3</option>
+                            <option value="12.3.1">12.3.1</option>
+                            <option value="12.3.2">12.3.2</option>
+                            <option value="12.4">12.4</option>
+                            <option value="12.4.1">12.4.1</option>
+                            <option value="12.4.2">12.4.2</option>
+                            <option value="12.4.3">12.4.3</option>
+                            <option value="12.4.4">12.4.4</option>
+                            <option value="12.4.5">12.4.5</option>
+                            <option value="12.4.6">12.4.6</option>
+                            <option value="12.4.7">12.4.7</option>
+                            <option value="12.4.8">12.4.8</option>
+                            <option value="13.0">13.0</option>
+                            <option value="13.1">13.1</option>
+                            <option value="13.1.1">13.1.1</option>
+                            <option value="13.1.2">13.1.2</option>
+                            <option value="13.1.3">13.1.3</option>
+                            <option value="13.2">13.2</option>
+                            <option value="13.2.1">13.2.1</option>
+                            <option value="13.2.2">13.2.2</option>
+                            <option value="13.2.3">13.2.3</option>
+                            <option value="13.3">13.3</option>
+                            <option value="13.3.1">13.3.1</option>
+                            <option value="13.4">13.4</option>
+                            <option value="13.4.1">13.4.1</option>
+                            <option value="13.5">13.5</option>
+                            <option value="13.5.1">13.5.1</option>
+                            <option value="13.6">13.6</option>
+                            <option value="13.6.1">13.6.1</option>
+                            <option value="13.7">13.7</option>
+                            <option value="14.0">14.0</option>
+                            <option value="14.0.1">14.0.1</option>
+                            <option value="14.1">14.1</option>
+                            <option value="14.2">14.2</option>
+                            <option value="14.3">14.3</option>
+                            <option value="14.4">14.4</option>
+                        </select>
+                        <footer class="text-muted">Can be found under Settings -> General -> About</footer>
+                        <button class="btn btn-outline-primary" type="submit">
+                            s
+                        </button>
+                    </div>
+                </form>
+                {% if showResult == True %}
+                    <div class="pt-3 pb-2">
+                        <div class="alert alert-success fade show" role="alert">
+                            <strong>Good News!</strong> Seems like you can jailbreak your <strong>{{ dev }}</strong> on <strong>{{ iosV }}</strong>
+                        </div>
+                    </div>
+                    <h2>Available Jailbreaks</h2>
+                    <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                        {% for jelbrek in jelbreks %}
+                            {{ createToolCard(jelbrek) }}
+                        {% endfor %}
+                    </div>
+                {% elif showResult == False %}
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        <strong>Sad News Alert:</strong> Seems like there's none available for your <strong>{{ dev }}</strong> on <strong>{{ iosV }}</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
