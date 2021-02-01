@@ -64,38 +64,78 @@
             <div class="col">
                 <form enctype="multipart/form-data" method="post" action="{{ url_for('HomeBP.guide_me') }}">
                     <div class="pb-3">
-                        <!-- iPhone Selector -->
                         <label for="devicePicker">Select your iDevice</label>
                         <select id="devicePicker" name="devicePicker" class="form-select">
-                            <option value="2G-iPhone 2G">iPhone 2G</option>
-                            <option value="3G-iPhone 3G">iPhone 3G</option>
-                            <option value="3GS-iPhone 3GS">iPhone 3GS</option>
-                            <option value="4-iPhone 4">iPhone 4</option>
-                            <option value="4S-iPhone 4S">iPhone 4S</option>
-                            <option value="5-iPhone 5">iPhone 5</option>
-                            <option value="5-iPhone 5C">iPhone 5C</option>
-                            <option value="5S-iPhone 5S" selected>iPhone 5S</option>
-                            <option value="6-iPhone 6">iPhone 6</option>
-                            <option value="6-iPhone 6 Plus">iPhone 6 Plus</option>
-                            <option value="6S-iPhone 6S">iPhone 6S</option>
-                            <option value="6S-iPhone 6S Plus">iPhone 6S Plus</option>
-                            <option value="6S-iPhone SE 1">iPhone SE (1.Generation)</option>
-                            <option value="7-iPhone 7">iPhone 7</option>
-                            <option value="7-iPhone 7 Plus">iPhone 7 Plus</option>
-                            <option value="8-iPhone 8">iPhone 8</option>
-                            <option value="8-iPhone 8 Plus">iPhone 8 Plus</option>
-                            <option value="X--iPhone X">iPhone X</option>
-                            <option value="XS-iPhone XR">iPhone XR</option>
-                            <option value="XS-iPhone XS">iPhone XS</option>
-                            <option value="XS-iPhone XS Max">iPhone XS Max</option>
-                            <option value="11-iPhone 11">iPhone 11</option>
-                            <option value="11-iPhone 11 Pro">iPhone 11 Pro</option>
-                            <option value="11-iPhone 11 Pro Max">iPhone 11 Pro Max</option>
-                            <option value="11-iPhone SE 2">iPhone SE (2.Generation)</option>
-                            <option value="12-iPhone 12 Mini">iPhone 12 Mini</option>
-                            <option value="12-iPhone 12">iPhone 12 </option>
-                            <option value="12-iPhone 12 Pro">iPhone 12 Pro</option>
-                            <option value="12-iPhone 12 Pro Max">iPhone 12 Pro Max</option>
+                            <!-- iPhone Selector -->
+                            <optgroup label="iPhones">
+                                <option value="2G-iPhone 2G">iPhone 2G</option>
+                                <option value="3G-iPhone 3G">iPhone 3G</option>
+                                <option value="3GS-iPhone 3GS">iPhone 3GS</option>
+                                <option value="4-iPhone 4">iPhone 4</option>
+                                <option value="4S-iPhone 4S">iPhone 4S</option>
+                                <option value="5-iPhone 5">iPhone 5</option>
+                                <option value="5-iPhone 5C">iPhone 5C</option>
+                                <option value="5S-iPhone 5S" selected>iPhone 5S</option>
+                                <option value="6-iPhone 6">iPhone 6</option>
+                                <option value="6-iPhone 6 Plus">iPhone 6 Plus</option>
+                                <option value="6S-iPhone 6S">iPhone 6S</option>
+                                <option value="6S-iPhone 6S Plus">iPhone 6S Plus</option>
+                                <option value="6S-iPhone SE 1">iPhone SE (1.Generation)</option>
+                                <option value="7-iPhone 7">iPhone 7</option>
+                                <option value="7-iPhone 7 Plus">iPhone 7 Plus</option>
+                                <option value="8-iPhone 8">iPhone 8</option>
+                                <option value="8-iPhone 8 Plus">iPhone 8 Plus</option>
+                                <option value="X--iPhone X">iPhone X</option>
+                                <option value="XS-iPhone XR">iPhone XR</option>
+                                <option value="XS-iPhone XS">iPhone XS</option>
+                                <option value="XS-iPhone XS Max">iPhone XS Max</option>
+                                <option value="11-iPhone 11">iPhone 11</option>
+                                <option value="11-iPhone 11 Pro">iPhone 11 Pro</option>
+                                <option value="11-iPhone 11 Pro Max">iPhone 11 Pro Max</option>
+                                <option value="11-iPhone SE 2">iPhone SE (2.Generation)</option>
+                                <option value="12-iPhone 12 Mini">iPhone 12 Mini</option>
+                                <option value="12-iPhone 12">iPhone 12 </option>
+                                <option value="12-iPhone 12 Pro">iPhone 12 Pro</option>
+                                <option value="12-iPhone 12 Pro Max">iPhone 12 Pro Max</option>
+                            </optgroup>
+                            <!-- iPad Selector -->
+                            <optgroup label="iPads">
+                                <option value="4-iPad 1">iPad 1</option>
+                                <option value="4S-iPad 2">iPad 2</option>
+                                <option value="4S-iPad 3">iPad 3</option>
+                                <option value="5-iPad 4">iPad 4</option>
+                                <option value="6S-iPad 5">iPad 5</option>
+                                <option value="7-iPad 6">iPad 6</option>
+                                <option value="7-iPad 7">iPad 7</option>
+                                <option value="XS-iPad 8">iPad 8</option>
+                                <option value="5S-iPad Air 1">iPad Air 1</option>
+                                <option value="6-iPad Air 2">iPad Air 2</option>
+                                <option value="XS-iPad Air 3">iPad Air 3</option>
+                                <option value="12-iPad Air 4">iPad Air 4</option>
+                                <option value="6S-iPad Pro (12.9)">iPad Pro (12.9)</option>
+                                <option value="6S-iPad Pro (9.7)">iPad Pro (9.7)</option>
+                                <option value="7-iPad Pro (12.9) (2.Generation)">iPad Pro (12.9) (2.Generation)</option>
+                                <option value="7-iPad Pro (10.5)">iPad Pro (10.5)</option>
+                                <option value="XS-iPad Pro (11)">iPad Pro (11)</option>
+                                <option value="XS-iPad Pro (12.9) (3.Generation)">iPad Pro (12.9) (3.Generation)</option>
+                                <option value="XS-iPad Pro (11) (2.Generation)">iPad Pro (11) (2.Generation)</option>
+                                <option value="XS-iPad Pro (12.9) (4.Generation)">iPad Pro (12.9) (4.Generation)</option>
+                                <option value="4S-iPad Mini 1">iPad Mini 1</option>
+                                <option value="5S-iPad Mini 2">iPad Mini 2</option>
+                                <option value="5S-iPad Mini 3">iPad Mini 3</option>
+                                <option value="6-iPad Mini 4">iPad Mini 4</option>
+                                <option value="XS-iPad Mini 5">iPad Mini 5</option>
+                            </optgroup>
+                            <!-- iPods -->
+                            <optgroup label="iPods (Touch)">
+                                <option value="3G-iPod Touch 1">iPod Touch 1</option>
+                                <option value="3G-iPod Touch 2">iPod Touch 2</option>
+                                <option value="3GS-iPod Touch 3">iPod Touch 3</option>
+                                <option value="4-iPod Touch 4">iPod Touch 4</option>
+                                <option value="4S-iPod Touch 5">iPod Touch 5</option>
+                                <option value="6-iPod Touch 6">iPod Touch 6</option>
+                                <option value="7-iPod Touch 7">iPod Touch 7</option>
+                            </optgroup>
                         </select>
                     </div>
                     <div class="pb-3">
@@ -268,9 +308,9 @@
                             <option value="14.3">14.3</option>
                             <option value="14.4">14.4</option>
                         </select>
-                        <footer class="text-muted">Can be found under Settings -> General -> About</footer>
+                        <footer class="text-muted pb-3">Can be found under Settings -> General -> About</footer>
                         <button class="btn btn-outline-primary" type="submit">
-                            s
+                            Find Jailbreak
                         </button>
                     </div>
                 </form>
