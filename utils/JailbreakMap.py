@@ -5,7 +5,7 @@ JailbreakMap = [
         "minIOS": "12.0",
         "maxIOS": "14.3",
         "minProc": "5S",
-        "maxProc": "8 / X",
+        "maxProc": "X",
         "type": "Semi-Tethered",
         "platforms": ['apple', 'linux']
     },
