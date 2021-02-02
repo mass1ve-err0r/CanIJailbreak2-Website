@@ -78,7 +78,7 @@ JailbreakMap = [
     },
     {
         "name": "doubleh3lix",
-        "url": "https://h3lix.tihmstar.net/",
+        "url": "https://doubleh3lix.tihmstar.net",
         "minIOS": "10.0",
         "maxIOS": "10.3.4",
         "minProc": "5S",
@@ -208,7 +208,7 @@ JailbreakMap = [
     },
     {
         "name": "redsn0w",
-        "url": "https://www.theiphonewiki.com/wiki/P0sixspwn",
+        "url": "https://www.theiphonewiki.com/wiki/Redsn0w#External_Links",
         "minIOS": "6.0",
         "maxIOS": "6.1.6",
         "minProc": "3GS",
