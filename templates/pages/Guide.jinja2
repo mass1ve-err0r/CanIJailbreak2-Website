@@ -309,6 +309,8 @@
                             <option value="14.4">14.4</option>
                         </select>
                         <footer class="text-muted pb-3">Can be found under Settings -> General -> About</footer>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto pb-3">
                         <button class="btn btn-outline-primary" type="submit">
                             Find Jailbreak
                         </button>
@@ -327,9 +329,10 @@
                         {% endfor %}
                     </div>
                 {% elif showResult == False %}
-                    <div class="alert alert-info alert-dismissible fade show" role="alert">
-                        <strong>Sad News Alert:</strong> Seems like there's none available for your <strong>{{ dev }}</strong> on <strong>{{ iosV }}</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <div class="pt-3 pb-2">
+                        <div class="alert alert-info fade show" role="alert">
+                            <strong>Sad News:</strong> There is no compatible Jailbreak for your <strong>{{ dev }}</strong> on <strong>{{ iosV }}</strong>
+                        </div>
                     </div>
                 {% endif %}
             </div>
