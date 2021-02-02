@@ -208,15 +208,5 @@ JailbreakMap = [
         "maxProc": "4",
         "type": "Mixed",
         "platforms": ['windows', 'apple']
-    },
-    {
-        "name": "ipwndfu",
-        "url": "https://github.com/axi0mX/ipwndfu/",
-        "minIOS": "6.0",
-        "maxIOS": "6.1.6",
-        "minProc": "3GS",
-        "maxProc": "3GS",
-        "type": "Mixed",
-        "platforms": ['apple', 'linux']
     }
 ]
