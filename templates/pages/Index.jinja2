@@ -29,6 +29,10 @@
                                     <span class="badge bg-success" data-bs-toggle="tooltip" data-bs-placement="top" title="You can re-jailbreak on device without a PC after a reboot, as long as the app remains signed!">Semi Untethered</span>
                                 {% elif _obj.get('type') == 'Semi-Tethered' %}
                                     <span class="badge bg-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="You NEED a PC to re-jailbreak after a reboot!">Semi Tethered</span>
+                                {% elif _obj.get('type') == 'Untethered' %}
+                                    <span class="badge bg-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="This means PERSISTENCE! Jailbreak will remain even after a reboot!">Untethered</span>
+                                {% elif _obj.get('type') == 'Mixed' %}
+                                    <span class="badge bg-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Please check th details surrounding this for more info as some versions have exceptions!">Mixed</span>
                                 {% endif %}
                             </div>
                         </div>
@@ -98,6 +102,30 @@
         <h2 class="pb-3">iOS 10 Jailbreaks</h2>
         <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
             {% for tool in tools10 %}
+                {{ createToolCard(tool) }}
+            {% endfor %}
+        </div>
+        <h2 class="pb-3">iOS 9 Jailbreaks</h2>
+        <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {% for tool in tools9 %}
+                {{ createToolCard(tool) }}
+            {% endfor %}
+        </div>
+        <h2 class="pb-3">iOS 8 Jailbreaks</h2>
+        <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {% for tool in tools8 %}
+                {{ createToolCard(tool) }}
+            {% endfor %}
+        </div>
+        <h2 class="pb-3">iOS 7 Jailbreaks</h2>
+        <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {% for tool in tools7 %}
+                {{ createToolCard(tool) }}
+            {% endfor %}
+        </div>
+        <h2 class="pb-3">iOS 6 Jailbreaks</h2>
+        <div class="pb-3 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            {% for tool in tools6 %}
                 {{ createToolCard(tool) }}
             {% endfor %}
         </div>
