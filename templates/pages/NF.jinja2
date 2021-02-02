@@ -1,0 +1,23 @@
+{% extends '_Foundation.jinja2' %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row min-vh-100 justify-content-center align-items-center">
+            <div class="col text-center">
+                <h2>This is awkward...</h2>
+                <p>
+                    Seems like the page you tried to visit does not exist.
+                </p>
+                <div class="d-grid gap-2 col-6 mx-auto pb-3">
+                    <a class="btn btn-outline-primary" href="{{ url_for('HomeBP.index') }}" target="_self">
+                        Back to Homepage
+                    </a>
+                    <a class="btn btn-outline-primary" href="{{ url_for('HomeBP.guide_me') }}" target="_self">
+                        Take me to the Jailbreak Wizard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

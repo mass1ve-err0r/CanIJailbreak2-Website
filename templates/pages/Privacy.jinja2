@@ -1,0 +1,23 @@
+{% extends '_Foundation.jinja2' %}
+
+{% block content %}
+    <div class="container min-vh-100">
+        <div class="row pt-2 pb-3">
+            <div class="col">
+                <h2>Privacy Policy</h2>
+                <p>
+                    Can I Jailbreak 2 (abbreviated as "CIJ2") does <strong>NOT</strong> collect any data.<br>
+                    <br>
+                    The only cookie you'll receive is a cloudflare cookie which is not used for tracking or anything similar by CIJ2.<br>
+                    <br><br>
+                    CIJ2 will not display ads or offer paid services. Enjoy a decent and free service! :-) 
+                </p>
+            </div>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto pb-3">
+            <a class="btn btn-outline-primary" href="{{ url_for('HomeBP.index') }}">
+                Back to Homepage
+            </a>
+        </div>
+    </div>
+{% endblock %}
