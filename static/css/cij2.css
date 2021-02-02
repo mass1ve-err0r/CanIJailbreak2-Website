@@ -1,0 +1,83 @@
+/* General Overrides */
+body {
+    background-color: #f8f8ff;
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    color: darkslategray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+}
+
+
+/* Bootstrap Overrides */
+.navbar {
+    background: rgba(255, 255, 255, 0.2) !important;
+    z-index: 2;
+    backdrop-filter: blur(10px) saturate(125%);
+    -webkit-backdrop-filter: blur(10px) saturate(125%);
+}
+
+.btn-outline-primary {
+    border-color: #007AFF;
+    color: #007AFF;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007AFF;
+    border-color: #007AFF;
+}
+
+.btn-outline-primary.dropdown-toggle.show {
+    background-color: #007AFF;
+    border-color: #007AFF;
+}
+
+.card {
+    height: 100px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    border-style: none;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow:0px 0px 20px #588da8;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.card-body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.card-body > .row {
+    height: 100%;
+    width: auto;
+}
+
+
+/* Custom Stuff */
+.bigger-card {
+    height: 150px !important;
+
+}
+
+.make-bold {
+    font-weight: bold;
+}
+
+.dynamic-text {
+    font-size: 4vw;
+}
