@@ -1,10 +1,12 @@
 # -*- Blueprint setup -*-
 from packaging.version import parse
 from sanic import Blueprint
-from sanic.response import html
+from sanic.response import html, json
+from sanic.exceptions import NotFound
 
-from utils.JailbreakMap import JailbreakMap as jMap
-from utils.DeviceMap import DeviceMap as dMap
+from utils.SiteHelper import JailbreakMap as jMap
+from utils.SiteHelper import DeviceMap as dMap
+
 
 HomeBP = Blueprint("HomeBP")
 _tools14 = [x for x in jMap if parse(x.get('minIOS')) <= parse("14.0") <= parse(x.get('maxIOS'))]
@@ -68,4 +70,14 @@ async def guide_me(request):
 async def privacy(request):
     template = request.app.J2env.get_template('/pages/Privacy.jinja2')
     _html = await template.render_async(title="Privacy | Can I Jailbreak2")
+    return html(_html)
+
+
+@HomeBP.exception(NotFound)
+async def site_exception(request, exception):
+    _target = request.path.split('/')[1]
+    if _target == 'v1':
+        return json({"status": "-1"})
+    template = request.app.J2env.get_template('/pages/NF.jinja2')
+    _html = await template.render_async(title="Holy Papaya! | Can I Jailbreak2")
     return html(_html)

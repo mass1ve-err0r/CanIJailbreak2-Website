@@ -27,7 +27,7 @@ app.J2env = J2env
 
 # -*- Blueprint Registration -*-
 app.blueprint(HomeBP)
-# app.blueprint(APIBP)
+app.blueprint(APIBP)
 
 
 # -*- DEBUG HEADERS -*-
