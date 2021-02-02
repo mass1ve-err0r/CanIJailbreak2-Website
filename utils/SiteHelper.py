@@ -1,3 +1,6 @@
+# Unified Mapped List
+APIMap = {'2G': ['iPhone 2G'], '3G': ['iPhone 3G', 'iPod Touch 1', 'iPod Touch 2'], '3GS': ['iPhone 3GS', 'iPod Touch 3'], '4': ['iPhone 4', 'iPad 1', 'iPod Touch 4'], '4S': ['iPhone 4S', 'iPad 2', 'iPad 3', 'iPad Mini 1', 'iPod Touch 5'], '5': ['iPhone 5', 'iPhone 5C', 'iPad 4'], '5S': ['iPhone 5S', 'iPad Air 1', 'iPad Mini 2', 'iPad Mini 3'], '6': ['iPhone 6', 'iPhone 6 Plus', 'iPad Air 2', 'iPad Mini 4', 'iPod Touch 6'], '6S': ['iPhone 6S', 'iPhone 6S Plus', 'iPhone SE 1', 'iPad 5', 'iPad Pro 12.9 1', 'iPad Pro 9.7'], '7': ['iPhone 7', 'iPhone 7 Plus', 'iPad 6', 'iPad 7', 'iPad Pro 12.9 2', 'iPad Pro 10.5', 'iPod Touch 7'], '8': ['iPhone 8', 'iPhone 8 Plus'], 'X': ['iPhone X'], 'XS': ['iPhone XR', 'iPhone XS', 'iPhone XS Max', 'iPad 8', 'iPad Air 3', 'iPad Pro 11', 'iPad Pro 12.9 3', 'iPad Pro 11 2', 'iPad Pro 12.9 4', 'iPad Mini 5'], '11': ['iPhone 11', 'iPhone 11 Pro', 'iPhone 11 Pro Max', 'iPhone SE 2'], '12': ['iPhone 12 Mini', 'iPhone 12', 'iPhone 12 Pro', 'iPhone 12 Pro Max', 'iPad Air 4']}
+
 # Device Mappings based on Processor
 DeviceMap = ["2G", "3G", "3GS", "4", "4S", "5", "5S", "6", "6S", "7", "8", "X", "XS", "11", "12"]
 
