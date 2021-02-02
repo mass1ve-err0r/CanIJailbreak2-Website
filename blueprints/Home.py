@@ -53,7 +53,7 @@ async def guide_me(request):
             ident_device_name = ident_device_split[1]
             _found = False
             map_supported = [x for x in jMap if (parse(x.get('minIOS')) <= parse(ident_ios) <= parse(x.get('maxIOS'))) \
-                             and (dMap.index(str(x.get('minProc'))) <= dMap.index(str(ident_device)) <= dMap.index(str(x.get('maxProc'))))]
+                             and (dMap.index(x.get('minProc')) <= dMap.index(ident_device) <= dMap.index(x.get('maxProc')))]
             if len(map_supported) != 0:
                 _found = True
             _html = await template.render_async(title="Jailbreak Wizard | Can I Jailbreak2",
@@ -77,7 +77,7 @@ async def privacy(request):
 async def site_exception(request, exception):
     _target = request.path.split('/')[1]
     if _target == 'v1':
-        return json({"status": "-1"})
+        return json({"status": -1})
     template = request.app.J2env.get_template('/pages/NF.jinja2')
     _html = await template.render_async(title="Holy Papaya! | Can I Jailbreak2")
     return html(_html)
