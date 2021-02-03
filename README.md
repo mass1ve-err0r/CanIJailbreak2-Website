@@ -32,7 +32,7 @@ Here's an example with the checkra1n utility:
 	"platforms": ['apple', 'linux']   <- List of supported platforms
 }
 ```
-The fields `minProc` and `maxProc` are essentially the processors but I opted to keep the device name and classify similar devices to the same name. It seems confusing at first but peeking at the `APIMap` in `SiteHelper.py` might make that more clear.
+The fields `minProc` and `maxProc` are essentially the processors but I opted to keep the device name and classify similar devices to the same name. It seems confusing at first but peeking at the `DeviceMapPG` in `SiteHelper.py` might make that more clear.
 
 _(This is subject to rewrite and any contribution is welcome in terms of design!)_
 
@@ -49,6 +49,18 @@ I tried to keep the API access pretty easy and self-explanatory so it works with
 Here's the potential return codes which get returned as json in the field `status`:
 - -1: Failure. No further data
 - 1: Query Successfully accepted **BUT** device _not_ found. No further data
+- 2: Query Successfully accepted **BUT** given iOS version was out-of-bounds. You will receive the following data (json):
+	- <details>
+		<summary>show exemplary return iPhone 5S & 13.0</summary>
+
+		```
+		{
+			"status": 2,
+			"minIOS": "7.0",
+			"maxIOS": "12.5.1"
+		}
+		```
+	</details
 - 0: Query Successfully accepted. You will have a field called `jelbreks` which is a list of objects formatted as shown in the _Contributing_ section.
 
 Example:
