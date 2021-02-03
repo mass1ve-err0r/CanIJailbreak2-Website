@@ -1,8 +1,5 @@
-# Unified Mapped List
-APIMap = {'2G': ['iPhone 2G'], '3G': ['iPhone 3G', 'iPod Touch 1', 'iPod Touch 2'], '3GS': ['iPhone 3GS', 'iPod Touch 3'], '4': ['iPhone 4', 'iPad 1', 'iPod Touch 4'], '4S': ['iPhone 4S', 'iPad 2', 'iPad 3', 'iPad Mini 1', 'iPod Touch 5'], '5': ['iPhone 5', 'iPhone 5C', 'iPad 4'], '5S': ['iPhone 5S', 'iPad Air 1', 'iPad Mini 2', 'iPad Mini 3'], '6': ['iPhone 6', 'iPhone 6 Plus', 'iPad Air 2', 'iPad Mini 4', 'iPod Touch 6'], '6S': ['iPhone 6S', 'iPhone 6S Plus', 'iPhone SE 1', 'iPad 5', 'iPad Pro 12.9 1', 'iPad Pro 9.7'], '7': ['iPhone 7', 'iPhone 7 Plus', 'iPad 6', 'iPad 7', 'iPad Pro 12.9 2', 'iPad Pro 10.5', 'iPod Touch 7'], '8': ['iPhone 8', 'iPhone 8 Plus'], 'X': ['iPhone X'], 'XS': ['iPhone XR', 'iPhone XS', 'iPhone XS Max', 'iPad 8', 'iPad Air 3', 'iPad Pro 11 1', 'iPad Pro 12.9 3', 'iPad Pro 11 2', 'iPad Pro 12.9 4', 'iPad Mini 5'], '11': ['iPhone 11', 'iPhone 11 Pro', 'iPhone 11 Pro Max', 'iPhone SE 2'], '12': ['iPhone 12 Mini', 'iPhone 12', 'iPhone 12 Pro', 'iPhone 12 Pro Max', 'iPad Air 4']}
-
 # Minimum Version List
-APIMinVersionMap = {
+MinVersionMap = {
     "iPhone 2G": "1.0",
     "iPhone 3G": "2.0", "iPhone 3GS": "3.0",
     "iPhone 4": "4.0", "iPhone 4S": "5.0",
@@ -22,9 +19,31 @@ APIMinVersionMap = {
     "iPod Touch 1": "1.1", "iPod Touch 2": "2.1.1", "iPod Touch 3": "3.1.1", "iPod Touch 4": "4.1", "iPod Touch 5": "6.0", "iPod Touch 6": "8.4", "iPod Touch 7": "12.3.1"
 }
 
+MaxVersionMap = {
+    "iPhone 2G": "3.1.1",
+    "iPhone 3G": "4.2.1", "iPhone 3GS": "6.1.6",
+    "iPhone 4": "7.1.2", "iPhone 4S": "9.3.6",
+    "iPhone 5": "10.3.4", "iPhone 5C": "10.3.3", "iPhone 5S": "12.5",
+    "iPhone 6": "12.5", "iPhone 6 Plus": "12.5",
+    "iPhone 6S": "14.4", "iPhone 6S Plus": "14.4",
+    "iPhone 7": "14.4", "iPhone 7 Plus": "14.4",
+    "iPhone 8": "14.4", "iPhone 8 Plus": "14.4", "iPhone X": "14.4",
+    "iPhone XS": "14.4", "iPhone XS Max": "14.4", "iPhone XR": "14.4",
+    "iPhone 11": "14.4", "iPhone 11 Pro": "14.4", "iPhone 11 Pro Max": "14.4",
+    "iPhone SE 1": "14.4", "iPhone SE 2": "14.4",
+    "iPhone 12": "14.4", "iPhone 12 Mini": "14.4", "iPhone 12 Pro": "14.4", "iPhone 12 Pro Max": "14.4",
+    "iPad 1": "5.1.1", "iPad 2": "9.3.6", "iPad 3": "9.3.6", "iPad 4": "10.3.4", "iPad 5": "14.4", "iPad 6": "14.4", "iPad 7": "14.4", "iPad 8": "14.4",
+    "iPad Air 1": "12.5.1", "iPad Air 2": "14.4", "iPad Air 3": "14.4", "iPad Air 4": "14.4",
+    "iPad Mini 1": "9.3.6", "iPad Mini 2": "12.5.1", "iPad Mini 3": "12.5.1", "iPad Mini 4": "14.4", "iPad Mini 5": "14.4",
+    "iPad Pro 12.9 1": "14.4", "iPad Pro 9.7": "14.4", "iPad Pro 12.9 2": "14.4", "iPad Pro 10.5": "14.4", "iPad Pro 11 1": "14.4", "iPad Pro 12.9 3": "14.4", "iPad Pro 11 2": "14.4", "iPad Pro 12.9 4": "14.4",
+    "iPod Touch 1": "3.1.3", "iPod Touch 2": "4.2.1", "iPod Touch 3": "5.1.1", "iPod Touch 4": "6.1.6", "iPod Touch 5": "9.3.5", "iPod Touch 6": "12.5.1", "iPod Touch 7": "14.4"
+}
 
-# Device Mappings based on Processor
-DeviceMap = ["2G", "3G", "3GS", "4", "4S", "5", "5S", "6", "6S", "7", "8", "X", "XS", "11", "12"]
+# Unified Mapped (NAMED) List
+DeviceMapPGNamed = {'2G': ['iPhone 2G'], '3G': ['iPhone 3G', 'iPod Touch 1', 'iPod Touch 2'], '3GS': ['iPhone 3GS', 'iPod Touch 3'], '4': ['iPhone 4', 'iPad 1', 'iPod Touch 4'], '4S': ['iPhone 4S', 'iPad 2', 'iPad 3', 'iPad Mini 1', 'iPod Touch 5'], '5': ['iPhone 5', 'iPhone 5C', 'iPad 4'], '5S': ['iPhone 5S', 'iPad Air 1', 'iPad Mini 2', 'iPad Mini 3'], '6': ['iPhone 6', 'iPhone 6 Plus', 'iPad Air 2', 'iPad Mini 4', 'iPod Touch 6'], '6S': ['iPhone 6S', 'iPhone 6S Plus', 'iPhone SE 1', 'iPad 5', 'iPad Pro 12.9 1', 'iPad Pro 9.7'], '7': ['iPhone 7', 'iPhone 7 Plus', 'iPad 6', 'iPad 7', 'iPad Pro 12.9 2', 'iPad Pro 10.5', 'iPod Touch 7'], '8': ['iPhone 8', 'iPhone 8 Plus'], 'X': ['iPhone X'], 'XS': ['iPhone XR', 'iPhone XS', 'iPhone XS Max', 'iPad 8', 'iPad Air 3', 'iPad Pro 11 1', 'iPad Pro 12.9 3', 'iPad Pro 11 2', 'iPad Pro 12.9 4', 'iPad Mini 5'], '11': ['iPhone 11', 'iPhone 11 Pro', 'iPhone 11 Pro Max', 'iPhone SE 2'], '12': ['iPhone 12 Mini', 'iPhone 12', 'iPhone 12 Pro', 'iPhone 12 Pro Max', 'iPad Air 4']}
+
+# Device Mappings based on Processor Generation
+DeviceMapPG = ["2G", "3G", "3GS", "4", "4S", "5", "5S", "6", "6S", "7", "8", "X", "XS", "11", "12"]
 
 # Jailbreak Tools
 JailbreakMap = [
