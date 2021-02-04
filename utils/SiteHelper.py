@@ -144,7 +144,7 @@ JailbreakMap = [
         "maxIOS": "9.3.3",
         "minProc": "5S",
         "maxProc": "6S",
-        "type": "Semi-Untethered",
+        "type": "Unteathered (9.0-9.1) / Semi-Untethered (9.2-9.3.3)",
         "platforms": ['windows', 'apple']
     },
     {
