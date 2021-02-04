@@ -65,7 +65,7 @@ JailbreakMap = [
         "minProc": "6S",
         "maxProc": "11",
         "type": "Semi-Untethered",
-        "platforms": ['apple']
+        "platforms": ['windows','apple']
     },
     {
         "name": "unc0ver",
@@ -75,7 +75,7 @@ JailbreakMap = [
         "minProc": "5S",
         "maxProc": "11",
         "type": "Semi-Untethered",
-        "platforms": ['apple']
+        "platforms": ['windows','apple']
     },
     {
         "name": "Chimera",
@@ -85,7 +85,7 @@ JailbreakMap = [
         "minProc": "5S",
         "maxProc": "XS",
         "type": "Semi-Untethered",
-        "platforms": ['apple']
+        "platforms": ['windows','apple']
     },
     {
         "name": "Electra",
@@ -95,7 +95,7 @@ JailbreakMap = [
         "minProc": "5S",
         "maxProc": "X",
         "type": "Semi-Untethered",
-        "platforms": ['apple']
+        "platforms": ['windows','apple']
     },
     {
         "name": "TotallyNotSpyware",
@@ -115,7 +115,7 @@ JailbreakMap = [
         "minProc": "5",
         "maxProc": "5",
         "type": "Semi-Untethered",
-        "platforms": ['apple']
+        "platforms": ['windows','apple']
     },
     {
         "name": "doubleh3lix",
@@ -125,7 +125,7 @@ JailbreakMap = [
         "minProc": "5S",
         "maxProc": "6S",
         "type": "Semi-Untethered",
-        "platforms": ['apple']
+        "platforms": ['windows','apple']
     },
     {
         "name": "Meridian",
@@ -175,7 +175,7 @@ JailbreakMap = [
         "minProc": "4S",
         "maxProc": "5",
         "type": "Semi-Untethered",
-        "platforms": ['apple']
+        "platforms": ['apple','windows']
     },
     {
         "name": "TaiG",
