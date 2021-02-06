@@ -20,11 +20,11 @@ MinVersionMap = {
 }
 
 MaxVersionMap = {
-    "iPhone 2G": "3.1.1",
+    "iPhone 2G": "3.1.3",
     "iPhone 3G": "4.2.1", "iPhone 3GS": "6.1.6",
     "iPhone 4": "7.1.2", "iPhone 4S": "9.3.6",
-    "iPhone 5": "10.3.4", "iPhone 5C": "10.3.3", "iPhone 5S": "12.5",
-    "iPhone 6": "12.5", "iPhone 6 Plus": "12.5",
+    "iPhone 5": "10.3.4", "iPhone 5C": "10.3.3", "iPhone 5S": "12.5.1",
+    "iPhone 6": "12.5.1", "iPhone 6 Plus": "12.5.1",
     "iPhone 6S": "14.4", "iPhone 6S Plus": "14.4",
     "iPhone 7": "14.4", "iPhone 7 Plus": "14.4",
     "iPhone 8": "14.4", "iPhone 8 Plus": "14.4", "iPhone X": "14.4",
@@ -51,7 +51,7 @@ JailbreakMap = [
         "name": "checkra1n",
         "url": "https://checkra.in",
         "minIOS": "12.0",
-        "maxIOS": "14.3",
+        "maxIOS": "14.4",
         "minProc": "5S",
         "maxProc": "X",
         "type": "Semi-Tethered",
@@ -121,7 +121,7 @@ JailbreakMap = [
         "name": "doubleh3lix",
         "url": "https://doubleh3lix.tihmstar.net",
         "minIOS": "10.0",
-        "maxIOS": "10.3.4",
+        "maxIOS": "10.3.3",
         "minProc": "5S",
         "maxProc": "6S",
         "type": "Semi-Untethered",
