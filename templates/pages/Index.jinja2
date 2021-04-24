@@ -88,13 +88,13 @@
                 This service is free of charge and will remain free, updated and ad-free.
             </p>
             <div class="text-end">
-                <a class="btn btn-outline-primary" href="#">Help Me Jailbreak!</a>
+                <a class="btn btn-outline-primary" href="{{ url_for('GeneralBP.guidance_get') }}">Help Me Jailbreak!</a>
             </div>
         </div>
         <div class="accordion pt-4" id="accordionExample">
             <div class="accordion-item card-like-background">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Legend</button>
+                    <button class="accordion-button collapsed card-like-title-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Legend</button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
@@ -129,7 +129,7 @@
             </div>
             <div class="accordion-item card-like-background">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Jailbreak Types</button>
+                    <button class="accordion-button collapsed card-like-title-sm pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Jailbreak Types</button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
@@ -160,7 +160,7 @@
                 </div>
             </div>
         </div>
-        <h2 class="pb-2 pt-5 m-1">iOS 14 Jailbreaks</h2>
+        <h2 class="pb-2 pt-5 m-1 card-like-title-lg">iOS 14 Jailbreaks</h2>
         <div class="pb-2 m-1 row row-cols-1 row-cols-lg-3 justify-content-md-center">
             {% for tool in tools14 %}
                 {% if not loop.last %}
@@ -170,7 +170,7 @@
                 {% endif %}
             {% endfor %}
         </div>
-        <h2 class="pb-2 pt-4 m-1">iOS 13 Jailbreaks</h2>
+        <h2 class="pb-2 pt-4 m-1 card-like-title-lg">iOS 13 Jailbreaks</h2>
         <div class="pb-2 m-1 row row-cols-1 row-cols-lg-3 justify-content-md-center">
             {% for tool in tools13 %}
                 {% if not loop.last %}
@@ -180,7 +180,7 @@
                 {% endif %}
             {% endfor %}
         </div>
-        <h2 class="pb-2 pt-4 m-1">iOS 12 Jailbreaks</h2>
+        <h2 class="pb-2 pt-4 m-1 card-like-title-lg">iOS 12 Jailbreaks</h2>
         <div class="pb-2 m-1 row row-cols-1 row-cols-lg-3 justify-content-md-center">
             {% for tool in tools12 %}
                 {% if not loop.last %}
@@ -190,7 +190,7 @@
                 {% endif %}
             {% endfor %}
         </div>
-        <h2 class="pb-2 pt-4 m-1">iOS 11 Jailbreaks</h2>
+        <h2 class="pb-2 pt-4 m-1 card-like-title-lg">iOS 11 Jailbreaks</h2>
         <div class="pb-2 m-1 row row-cols-1 row-cols-lg-3 justify-content-md-center">
             {% for tool in tools11 %}
                 {% if not loop.last %}
@@ -200,9 +200,49 @@
                 {% endif %}
             {% endfor %}
         </div>
-        <h2 class="pb-2 pt-4 m-1">iOS 10 Jailbreaks</h2>
+        <h2 class="pb-2 pt-4 m-1 card-like-title-lg">iOS 10 Jailbreaks</h2>
         <div class="pb-2 m-1 row row-cols-1 row-cols-md-3 justify-content-md-center">
             {% for tool in tools10 %}
+                {% if not loop.last %}
+                    {{ createToolCard(tool, false) }}
+                {% else %}
+                    {{ createToolCard(tool, true) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <h2 class="pb-2 pt-4 m-1 card-like-title-lg">iOS 9 Jailbreaks</h2>
+        <div class="pb-2 m-1 row row-cols-1 row-cols-md-3 justify-content-md-center">
+            {% for tool in tools9 %}
+                {% if not loop.last %}
+                    {{ createToolCard(tool, false) }}
+                {% else %}
+                    {{ createToolCard(tool, true) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <h2 class="pb-2 pt-4 m-1 card-like-title-lg">iOS 8 Jailbreaks</h2>
+        <div class="pb-2 m-1 row row-cols-1 row-cols-md-3 justify-content-md-center">
+            {% for tool in tools8 %}
+                {% if not loop.last %}
+                    {{ createToolCard(tool, false) }}
+                {% else %}
+                    {{ createToolCard(tool, true) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <h2 class="pb-2 pt-4 m-1 card-like-title-lg">iOS 7 Jailbreaks</h2>
+        <div class="pb-2 m-1 row row-cols-1 row-cols-md-3 justify-content-md-center">
+            {% for tool in tools7 %}
+                {% if not loop.last %}
+                    {{ createToolCard(tool, false) }}
+                {% else %}
+                    {{ createToolCard(tool, true) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <h2 class="pb-2 pt-4 m-1 card-like-title-lg">iOS 6 Jailbreaks</h2>
+        <div class="pb-2 m-1 row row-cols-1 row-cols-md-3 justify-content-md-center">
+            {% for tool in tools6 %}
                 {% if not loop.last %}
                     {{ createToolCard(tool, false) }}
                 {% else %}
