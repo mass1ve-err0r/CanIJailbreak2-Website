@@ -30,12 +30,6 @@ a:hover {
     backdrop-filter: blur(10px) saturate(125%);
     -webkit-backdrop-filter: blur(10px) saturate(125%);
 }
-.navbar-nav > li > .dropdown-menu {
-    background: rgba(245, 245, 245, 0.2) !important;
-    z-index: 2;
-    backdrop-filter: blur(10px) saturate(125%);
-    -webkit-backdrop-filter: blur(10px) saturate(125%);
-}
 .navbar-brand {
     color: #212F3E !important;
 }
@@ -74,20 +68,21 @@ a:hover {
     box-shadow: 0 0 10px #FECA57;
 }
 
-.form-control {
+.form-select {
     color: black;
     background-color: white;
     border: 2px solid #576574;
+    border-radius: .25rem;
 }
-.form-control:disabled {
+.form-select:disabled {
     color: black;
     background-color: white;
-    border: 2px solid #576574;
+    border: 1px solid #576574;
 }
-.form-control:focus {
+.form-select:focus {
     color: black;
     background-color: white;
-    border: 2px solid #2E86DE;
+    border: 2px solid #00A3A4;
     box-shadow: none;
 }
 
@@ -144,7 +139,7 @@ a:hover {
     cursor: alias;
 }
 
-.update-banner {
+.update-banner, .error-banner, .info-banner {
     color: #212F3E;
     margin-top: .5rem;
     background-color: #FECA57;
@@ -159,6 +154,18 @@ a:hover {
 .update-banner:hover {
     box-shadow: 0 0 20px #FECA57;
 }
+.error-banner {
+    background-color: #EE5353;
+}
+.error-banner:hover {
+    box-shadow: 0 0 20px #EE5353;
+}
+.info-banner {
+    background-color: #1CD1A1;
+}
+.info-banner:hover {
+    box-shadow: 0 0 20px #1CD1A1;
+}
 
 .card-nodynamic:hover {
     transform: none;
@@ -168,28 +175,19 @@ a:hover {
     box-shadow: 2px 2px 10px #C8D6E5;
     border-radius: .45rem;
 }
-.card-like-title {
+.card-like-title, .card-like-title-lg, .card-like-title-sm {
     color: #576574;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
     padding-bottom: 5px;
 }
+.card-like-title-lg {
+    font-size: 1.3rem;
+}
 .card-like-title-sm {
     color: #8395A7;
     font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding-bottom: 3px;
-}
-
-.btn-col-l {
-    flex: 0 0 auto;
-    width: 75% !important;
-}
-.btn-col-r {
-    flex: 0 0 auto;
-    width: 15% !important;
 }
 
 .card-like-sm {
@@ -200,18 +198,10 @@ a:hover {
     .card-like-sm {
         width: 100%;
     }
-    .card-column {
-        flex: 0 0 auto;
-        width: 100%;
-    }
 }
 @media(min-width: 768px) {
     .card-like-sm {
         width: 45%;
-    }
-    .card-column {
-        flex: 0 0 auto;
-        width: 49%;
     }
 }
 @media(min-width: 992px) {
