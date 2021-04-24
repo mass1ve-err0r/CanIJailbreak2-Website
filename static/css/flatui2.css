@@ -1,0 +1,267 @@
+/* ------------------------------------------------------------------------------ */
+/* FlatUI2 Color Stylesheet                                                       */
+/* Thanks to Dmitri Litvinov for the palette!                                     */
+/* Source: https://dribbble.com/shots/4136598-Flat-UI-Colors-2/attachments/946253 */
+/* ------------------------------------------------------------------------------ */
+
+
+/*-  UI + UX Colors  -*/
+.flatui2_white {
+    color: #F7FBFF !important;
+}
+.flatui2_white_border {
+    border-color: #F7FBFF !important;
+}
+.flatui2_white_background {
+    background-color: #F7FBFF !important;
+}
+
+.flatui2_grey_light {
+    color: #C8D6E5 !important;
+}
+.flatui2_grey_light_border {
+    border-color: #C8D6E5 !important;
+}
+.flatui2_grey_light_background {
+    background-color: #c8d6e5 !important;
+}
+
+.flatui2_grey_dark {
+    color: #576574 !important;
+}
+.flatui2_grey_dark_border {
+    border-color: #576574 !important;
+}
+.flatui2_grey_dark_background {
+    background-color: #576574 !important;
+}
+
+.flatui2_grey_medium {
+    color: #8395A7 !important;
+}
+.flatui2_grey_medium_border {
+    border-color: #8395A7 !important;
+}
+.flatui2_grey_medium_background {
+    background-color: #8395A7 !important;
+}
+
+.flatui2_black {
+    color: #212F3E !important;
+}
+.flatui2_black_border {
+    border-color: #212F3E !important;
+}
+.flatui2_black_background {
+    background-color: #212F3E !important;
+}
+
+
+/*-  Colors  -*/
+.flatui2_pink_light {
+    color: #FF9FF3 !important;
+}
+.flatui2_pink_light_border {
+    border-color: #FF9FF3 !important;
+}
+.flatui2_pink_light_background {
+    background-color: #FF9FF3 !important;
+}
+
+.flatui2_pink {
+    color: #F368E0 !important;
+}
+.flatui2_pink_border {
+    border-color: #F368E0 !important;
+}
+.flatui2_pink_background {
+    background-color: #F368E0 !important;
+}
+
+.flatui2_yellow {
+    color: #FECA57 !important;
+}
+.flatui2_yellow_border {
+    border-color: #FECA57 !important;
+}
+.flatui2_yellow_background {
+    background-color: #FECA57 !important;
+}
+
+.flatui2_orange {
+    color: #FF9F43 !important;
+}
+.flatui2_orange_border {
+    border-color: #FF9F43 !important;
+}
+.flatui2_orange_background {
+    background-color: #FF9F43 !important;
+}
+
+.flatui2_coral {
+    color: #FF6B6B !important;
+}
+.flatui2_coral_border {
+    border-color: #FF6B6B !important;
+}
+.flatui2_coral_background {
+    background-color: #FF6B6B !important;
+}
+
+.flatui2_red {
+    color: #EE5353 !important;
+}
+.flatui2_red_border {
+    border-color: #EE5353 !important;
+}
+.flatui2_red_background {
+    background-color: #EE5353 !important;
+}
+
+.flatui2_teal {
+    color: #4DDBFB !important;
+}
+.flatui2_teal_border {
+    border-color: #4DDBFB !important;
+}
+.flatui2_teal_background {
+    background-color: #4DDBFB !important;
+}
+
+.flatui2_blue {
+    color: #569FFF !important;
+}
+.flatui2_blue_border {
+    border-color: #569FFF !important;
+}
+.flatui2_blue_background {
+    background-color: #569FFF !important;
+}
+
+.flatui2_green {
+    color: #1CD1A1 !important;
+}
+.flatui2_green_border {
+    border-color: #1CD1A1 !important;
+}
+.flatui2_green_background {
+    background-color: #1CD1A1 !important;
+}
+
+.flatui2_green_dark {
+    color: #10AC84 !important;
+}
+.flatui2_green_dark_border {
+    border-color: #10AC84 !important;
+}
+.flatui2_green_dark_background {
+    background-color: #10AC84 !important;
+}
+
+.flatui2_aqua {
+    color: #00D2D3 !important;
+}
+.flatui2_aqua_border {
+    border-color: #00D2D3 !important;
+}
+.flatui2_aqua_background {
+    background-color: #00D2D3 !important;
+}
+
+.flatui2_forest {
+    color: #00A3A4 !important;
+}
+.flatui2_forest_border {
+    border-color: #00A3A4 !important;
+}
+.flatui2_forest_background {
+    background-color: #00A3A4 !important;
+}
+
+.flatui2_blue_light {
+    color: #54A0FF !important;
+}
+.flatui2_blue_light_border {
+    border-color: #54A0FF !important;
+}
+.flatui2_blue_light_background {
+    background-color: #54A0FF !important;
+}
+
+.flatui2_blue_dark {
+    color: #2E86DE !important;
+}
+.flatui2_blue_dark_border {
+    border-color: #2E86DE !important;
+}
+.flatui2_blue_dark_background {
+    background-color: #2E86DE !important;
+}
+
+.flatui2_purple {
+    color: #5F27CD !important;
+}
+.flatui2_purple_border {
+    border-color: #5F27CD !important;
+}
+.flatui2_purple_background {
+    background-color: #5F27CD !important;
+}
+
+.flatui2_purple_dark {
+    color: #341E97 !important;
+}
+.flatui2_purple_dark_border {
+    border-color: #341E97 !important;
+}
+.flatui2_purple_dark_background{
+    background-color: #341E97 !important;
+}
+
+
+/*- Gradients -*/
+.flatui2_bluegreen_gradient {
+    background: linear-gradient(73deg, #005fdc, #57FF94);
+    background-size: 400% 400%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: flatui2_bluegreen_gradient 15s ease infinite;
+    -moz-animation: flatui2_bluegreen_gradient 15s ease infinite;
+    animation: flatui2_bluegreen_gradient 15s ease infinite;
+}
+.flatui2_greenpink_gradient {
+    background: linear-gradient(73deg, #57FFCE, #D857FF);
+    background-size: 400% 400%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: flatui2_bluegreen_gradient 15s ease infinite;
+    -moz-animation: flatui2_bluegreen_gradient 15s ease infinite;
+    animation: flatui2_bluegreen_gradient 15s ease infinite;
+}
+.flatui2_redorange_gradient {
+    background: linear-gradient(73deg, #EE5353, #EEBA53);
+    background-size: 400% 400%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: flatui2_bluegreen_gradient 15s ease infinite;
+    -moz-animation: flatui2_bluegreen_gradient 15s ease infinite;
+    animation: flatui2_bluegreen_gradient 15s ease infinite;
+}
+@-webkit-keyframes flatui2_bluegreen_gradient {
+    0%{background-position:18% 0%}
+    50%{background-position:83% 100%}
+    100%{background-position:18% 0%}
+}
+@-moz-keyframes flatui2_bluegreen_gradient {
+    0%{background-position:18% 0%}
+    50%{background-position:83% 100%}
+    100%{background-position:18% 0%}
+}
+@keyframes flatui2_bluegreen_gradient {
+    0%{background-position:18% 0%}
+    50%{background-position:83% 100%}
+    100%{background-position:18% 0%}
+}
