@@ -155,12 +155,14 @@ a:hover {
     box-shadow: 0 0 20px #FECA57;
 }
 .error-banner {
+    cursor: auto;
     background-color: #EE5353;
 }
 .error-banner:hover {
     box-shadow: 0 0 20px #EE5353;
 }
 .info-banner {
+    cursor: auto;
     background-color: #1CD1A1;
 }
 .info-banner:hover {

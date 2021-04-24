@@ -341,14 +341,12 @@
         </div>
         {% if bannerType == 1 %}
             <div class="pt-5"></div>
-            <a href="#">
-                <div class="info-banner fade show" role="alert">
-                    <strong>(*^‿^*) Woohoo !</strong><br>
-                    You can jailbreak your <strong>{{ device }} on {{ ios_version }}</strong> with the tools listed below !<br>
-                    <br>
-                    <small>Make sure to read additional notes (⚠️) if there are any!</small>
-                </div>
-            </a>
+            <div class="info-banner fade show" role="alert">
+                <strong>(*^‿^*) Woohoo !</strong><br>
+                You can jailbreak your <strong>{{ device }} on {{ ios_version }}</strong> with the tools listed below !<br>
+                <br>
+                <small>Make sure to read additional notes (⚠️) if there are any!</small>
+            </div>
             <div class="pt-4 pb-2">
                 <h1 class="card-like-title-lg">Available Jailbreaks</h1>
                 <div class="pb-2 m-1 row row-cols-1 row-cols-lg-3 justify-content-md-center">
@@ -363,12 +361,10 @@
             </div>
         {% elif bannerType == 2 %}
             <div class="pt-5 pb-2">
-                <a href="#">
-                    <div class="error-banner fade show" role="alert">
-                        <strong>(╥﹏╥) Oh No !</strong><br>
-                        Currently there's no jailbreak available for your <strong>{{ device }} on {{ ios_version }} !</strong>
-                    </div>
-                </a>
+                <div class="error-banner fade show" role="alert">
+                    <strong>(╥﹏╥) Oh No !</strong><br>
+                    Currently there's no jailbreak available for your <strong>{{ device }} on {{ ios_version }} !</strong>
+                </div>
             </div>
         {% elif bannerType == 3 %}
             <div class="pt-5 pb-2">
