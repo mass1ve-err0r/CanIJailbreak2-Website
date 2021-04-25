@@ -46,7 +46,7 @@ JailbreakMap = [
         "maximum_pg": "12",
         "type": "Semi-Untethered",
         "platforms": ['apple'],
-        "notes": []
+        "notes": ["A12 Supported between 12.0 - 12.3 and 12.4 - 12.4.1"]
     },
     {
         "name": "Chimera",

@@ -87,7 +87,7 @@ a:hover {
 }
 
 .modal-dialog {
-  padding-top: 50%;
+  padding-top: 25%;
 }
 .modal-header {
     border-bottom: none;
@@ -96,7 +96,7 @@ a:hover {
     border-top: none;
 }
 .modal-content {
-    background: rgba(245, 245, 245, 0.8) !important;
+    background: rgba(245, 245, 245, 0.6) !important;
     z-index: 2;
     backdrop-filter: blur(10px) saturate(125%);
     -webkit-backdrop-filter: blur(10px) saturate(125%);
