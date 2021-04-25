@@ -1,0 +1,39 @@
+{% extends '_Foundation.jinja2' %}
+
+
+{% block content %}
+    <div class="container pt-2 pb-3">
+        <div class="card-like-background m-1 p-3">
+            <h1 class="card-like-title">Terms of Service</h1>
+            <p>
+                CanIJailbreak2 is made free of charge for everyone to use and contribute to.<br>
+                <br>
+                The (brand-) name "CanIJailbreak2" may <strong>not</strong> be used on forks which include advertisements of any forms.<br>
+                Any fork <strong>must</strong> retain the original copyright and linkage to the original author.<br>
+            </p>
+        </div>
+    </div>
+    <div class="container pt-2 pb-3">
+        <div class="card-like-background m-1 p-3">
+            <h1 class="card-like-title">Privacy Policy</h1>
+            <p>
+                This website <strong>does not</strong> use cookies itself.<br>
+                You will however receive a mandatory cookie from Cloudflare. This cookie cannot be used against you.<br>
+                <br>
+                Enjoy an ad-free experience and even better UX/ UI :-)
+            </p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 text-center gy-2 pt-4">
+            <div class="col d-grid">
+                <a class="btn btn-outline-primary" href="{{ url_for('GeneralBP.homepage') }}" target="_self">
+                    Homepage
+                </a>
+            </div>
+            <div class="col d-grid">
+                <a class="btn btn-outline-primary" href="{{ url_for('GeneralBP.guidance_get') }}" target="_self">
+                    Jailbreak Wizard
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
