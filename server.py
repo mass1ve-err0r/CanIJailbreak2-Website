@@ -8,6 +8,7 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 load_dotenv("./.env")
 
 from blueprints.general import GeneralBP
+from blueprints.api import APIBP
 
 
 # -*- Server Config -*-
@@ -27,14 +28,9 @@ J2Env.globals["url_for"] = app.url_for
 app.ctx.J2Env = J2Env
 
 
-# -*- DEBUG ALL Exception Handler -*-
-@app.exception(SanicException)
-async def catch_exceptions_4xx_5xx(req, excp):
-    return empty(status=999)
-
-
 # -*- Blueprint Registration -*-
 app.blueprint(GeneralBP)
+app.blueprint(APIBP)
 
 
 # -*- DEBUG HEADERS -*-
