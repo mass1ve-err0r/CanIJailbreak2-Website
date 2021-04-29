@@ -1,4 +1,4 @@
-Gmaximum_ios = "14.4.2"
+Gmaximum_ios = "14.5"
 
 # Jailbreak Tools
 JailbreakMap = [
