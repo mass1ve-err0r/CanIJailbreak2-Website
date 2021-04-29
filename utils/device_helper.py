@@ -20,7 +20,7 @@ MinVersionMap = {
 }
 
 # Maximum Version List
-GMaxiOS = "14.4.2"
+GMaxiOS = "14.5"
 MaxVersionMap = {
     "iPhone 2G": "3.1.3",
     "iPhone 3G": "4.2.1", "iPhone 3GS": "6.1.6",
