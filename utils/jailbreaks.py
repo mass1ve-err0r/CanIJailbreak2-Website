@@ -1,11 +1,11 @@
-Gmaximum_ios = "14.5"
+Gmaximum_ios = "14.5.1"
 
 # Jailbreak Tools
 JailbreakMap = [
     {
         "name": "checkra1n",
         "url": "https://checkra.in",
-        "current_version": "0.12.2",
+        "current_version": "0.12.3",
         "minimum_ios": "12.0",
         "minimum_pg": "5S",
         "maximum_ios": Gmaximum_ios,
@@ -87,7 +87,7 @@ JailbreakMap = [
         "name": "h3lix",
         "url": "https://h3lix.tihmstar.net/",
         "current_version": "RC 6",
-        "minimum_ios": "10.0",
+        "minimum_ios": "10.0.1",
         "maximum_ios": "10.3.4",
         "minimum_pg": "5",
         "maximum_pg": "5",
@@ -99,13 +99,13 @@ JailbreakMap = [
         "name": "doubleh3lix",
         "url": "https://doubleh3lix.tihmstar.net",
         "current_version": "RC 8",
-        "minimum_ios": "10.0",
+        "minimum_ios": "10.0.1",
         "maximum_ios": "10.3.3",
         "minimum_pg": "5S",
         "maximum_pg": "6S",
         "type": "Semi-Untethered",
         "platforms": ['apple'],
-        "notes": ["Only for 64-bit devices", "iPhone 7/ 7 Plus excluded"]
+        "notes": ["Only for 64-bit devices", "iPhone 7/7 Plus excluded"]
     },
     {
         "name": "Meridian",
@@ -120,21 +120,57 @@ JailbreakMap = [
         "notes": ["Only for 64-bit devices"]
     },
     {
-        "name": "Pangu9",
+        "name": "yalu102",
+        "url": "https://yalu.qwertyoruiop.com/",
+        "current_version": "beta 7",
+        "minimum_ios": "10.2",
+        "maximum_ios": "10.2",
+        "minimum_pg": "5S",
+        "maximum_pg": "6S",
+        "type": "Semi-Untethered",
+        "platforms": ['apple'],
+        "notes": ["Only for 64-bit devices", "iPhone 7/7 Plus excluded"]
+    },
+    {
+        "name": "extra_recipe+yaluX",
+        "url": "https://yalu.qwertyoruiop.com/",
+        "current_version": "beta 4",
+        "minimum_ios": "10.1.1",
+        "maximum_ios": "10.0.1",
+        "minimum_pg": "7",
+        "maximum_pg": "7",
+        "type": "Semi-Untethered",
+        "platforms": ['apple'],
+        "notes": ["Only for the iPhone 7"]
+    },
+    {
+        "name": "Pangu91",
         "url": "http://en.pangu.io/",
         "current_version": "1.3.2",
         "minimum_ios": "9.0",
+        "maximum_ios": "9.1",
+        "minimum_pg": "4S",
+        "maximum_pg": "6S",
+        "type": "Untethered",
+        "platforms": ['windows', 'apple'],
+        "notes": ["Official servers are down for this jailbreak."]
+    },
+    {
+        "name": "Pangu933",
+        "url": "http://en.pangu.io/",
+        "current_version": "1.1",
+        "minimum_ios": "9.2",
         "maximum_ios": "9.3.3",
         "minimum_pg": "5S",
         "maximum_pg": "6S",
-        "type": "Mixed",
-        "platforms": ['windows', 'apple'],
-        "notes": ["9.0 - 9.1 Untethered", "9.2 - 9.3.3 Semi-Untethered for 64-bit devices"]
+        "type": "Semi-Untethered",
+        "platforms": ['apple'],
+        "notes": ["Official servers are down for this jailbreak.", "Only for 64-bit devices", "Can be jumpstarted on-device via jbme.qwertyoruiop.com"]
     },
     {
         "name": "HomeDepot",
-        "url": "http://wall.supplies/OLD%20iPhone%20HACKED.html",
-        "current_version": "1.1 b1",
+        "url": "http://wall.supplies/",
+        "current_version": "RC3",
         "minimum_ios": "9.1",
         "maximum_ios": "9.3.4",
         "minimum_pg": "4S",
@@ -176,7 +212,8 @@ JailbreakMap = [
         "minimum_pg": "4S",
         "maximum_pg": "6",
         "type": "Untethered",
-        "platforms": ['windows', 'apple']
+        "platforms": ['windows', 'apple'],
+        "notes": ["Official servers are down for this jailbreak."]
     },
     {
         "name": "Pangu8",
@@ -187,7 +224,32 @@ JailbreakMap = [
         "minimum_pg": "4S",
         "maximum_pg": "6",
         "type": "Untethered",
-        "platforms": ['windows', 'apple']
+        "platforms": ['windows', 'apple'],
+        "notes": ["Official servers are down for this jailbreak."]
+    },
+    {
+        "name": "etasonJB",
+        "url": "http://tihmstar.net/etasonjb/",
+        "current_version": "RC5",
+        "minimum_ios": "8.4.1",
+        "maximum_ios": "8.4.1",
+        "minimum_pg": "4S",
+        "maximum_pg": "5",
+        "type": "Untethered",
+        "platforms": ['apple'],
+        "notes": ["Only for 32-bit devices"]
+    },
+    {
+        "name": "HomeDepot841",
+        "url": "http://wall.supplies/OLD%20iPhone%20HACKED.html",
+        "current_version": "1.1 beta 1",
+        "minimum_ios": "8.4.1",
+        "maximum_ios": "8.4.1",
+        "minimum_pg": "4S",
+        "maximum_pg": "5",
+        "type": "Semi-tethered",
+        "platforms": ['apple'],
+        "notes": ["Only for 32-bit devices", "Can be untethered by installing the etasonJB Untether package"]
     },
     {
         "name": "evasi0n7",
@@ -198,7 +260,8 @@ JailbreakMap = [
         "minimum_pg": "4",
         "maximum_pg": "5S",
         "type": "Untethered",
-        "platforms": ['windows', 'apple']
+        "platforms": ['windows', 'apple'],
+        "notes": ["Official servers are down for this jailbreak.", "evasi0n7 is known to cause bootloops with devices that were updated OTA."]
     },
     {
         "name": "Pangu",
@@ -209,7 +272,8 @@ JailbreakMap = [
         "minimum_pg": "4",
         "maximum_pg": "5S",
         "type": "Untethered",
-        "platforms": ['windows', 'apple']
+        "platforms": ['windows', 'apple'],
+        "notes": ["Official servers are down for this jailbreak."]
     },
     {
         "name": "evasi0n",
@@ -220,30 +284,29 @@ JailbreakMap = [
         "minimum_pg": "3GS",
         "maximum_pg": "5",
         "type": "Untethered",
-        "platforms": ['windows', 'apple', 'linux']
+        "platforms": ['windows', 'apple']
     },
     {
         "name": "sn0wbreeze",
         "url": "https://ih8sn0w.com",
         "current_version": "2.9.14",
-        "minimum_ios": "6.0",
+        "minimum_ios": "3.1.3",
         "maximum_ios": "6.1.3",
         "minimum_pg": "3GS",
         "maximum_pg": "4",
         "type": "Mixed",
         "platforms": ['windows'],
-        "notes": ["Incorporates the same exploits used in evasi0n"]
+        "notes": ["iOS 6.1.3 on the iPhone 3GS (new bootrom) and iPhone 4 will be tethered."]
     },
     {
-        "name": "p0sixpwn",
-        "url": "https://www.theiphonewiki.com/wiki/P0sixspwn",
+        "name": "p0sixspwn",
+        "url": "https://ih8sn0w.com/p0sixspwn.html",
         "current_version": "1.0.8",
         "minimum_ios": "6.1.3",
         "maximum_ios": "6.1.6",
         "minimum_pg": "3GS",
         "maximum_pg": "5",
         "type": "Untethered",
-        "platforms": ['windows', 'apple'],
-        "notes": ["Originally as package to untether already jailbroken devices"]
+        "platforms": ['windows', 'apple']
     }
 ]
