@@ -1,14 +1,14 @@
-Gmaximum_ios = "14.5.1"
+Gmaximum_ios = "15.1"
 
 # Jailbreak Tools
 JailbreakMap = [
     {
         "name": "checkra1n",
         "url": "https://checkra.in",
-        "current_version": "0.12.3",
+        "current_version": "0.12.2",
         "minimum_ios": "12.0",
         "minimum_pg": "5S",
-        "maximum_ios": Gmaximum_ios,
+        "maximum_ios": "14.8",
         "maximum_pg": "X",
         "type": "Semi-Tethered",
         "platforms": ['apple', 'linux'],
@@ -17,13 +17,37 @@ JailbreakMap = [
     {
         "name": "Taurine",
         "url": "https://taurine.app",
-        "current_version": "1.0.4",
+        "current_version": "1.1.1",
         "minimum_ios": "14.0",
         "minimum_pg": "6S",
         "maximum_ios": "14.3",
         "maximum_pg": "12",
         "type": "Semi-Untethered",
         "platforms": ['apple']
+    },
+    {
+        "name": "fugu14 for unc0ver",
+        "url": "https://github.com/LinusHenze/Fugu14",
+        "current_version": "1",
+        "minimum_ios": "14.3",
+        "maximum_ios": "14.5.1",
+        "minimum_pg": "XS",
+        "maximum_pg": "12 Pro",
+        "type": "Near-Untethered",
+        "platforms": ['apple'],
+        "notes": ["It is an incomplete untethered jailbreak (so expect bugs). For now, it only supports arm64e devices. Visit r/jailbreak subreddit for more info and discussions."]
+    },
+    {
+        "name": "unc0ver",
+        "url": "https://unc0ver.dev",
+        "current_version": "7.0.2",
+        "minimum_ios": "11.0",
+        "maximum_ios": "14.3",
+        "minimum_pg": "5S",
+        "maximum_pg": "12",
+        "type": "Semi-Untethered",
+        "platforms": ['apple'],
+        "notes": ["A12 Supported between 12.0 - 12.3 and 12.4 - 12.4.1"]
     },
     {
         "name": "Odyssey",
@@ -37,28 +61,16 @@ JailbreakMap = [
         "platforms": ['apple']
     },
     {
-        "name": "unc0ver",
-        "url": "https://unc0ver.dev",
-        "current_version": "6.1.2",
-        "minimum_ios": "11.0",
-        "maximum_ios": "14.3",
-        "minimum_pg": "5S",
-        "maximum_pg": "12",
-        "type": "Semi-Untethered",
-        "platforms": ['apple'],
-        "notes": ["A12 Supported between 12.0 - 12.3 and 12.4 - 12.4.1"]
-    },
-    {
         "name": "Chimera",
         "url": "https://chimera.coolstar.org",
-        "current_version": "1.6.2",
+        "current_version": "1.6.4",
         "minimum_ios": "12.0",
-        "maximum_ios": "12.5.1",
+        "maximum_ios": "12.5.5",
         "minimum_pg": "5S",
         "maximum_pg": "XS",
         "type": "Semi-Untethered",
         "platforms": ['apple'],
-        "notes": ["A12 Support only up to 12.1.2"]
+        "notes": ["Works for; A7-A11 devices running 12.0-12.5.1, A12 devices on 12.0-12.1.2, and tvOS 12.0-12.2 and 12.4. (Nonce setter only on 12.1.3-12.2, 12.4-12.4.1 for A12 devices.)"]
     },
     {
         "name": "Electra",
