@@ -1,11 +1,11 @@
-Gmaximum_ios = "14.5"
+Gmaximum_ios = "14.8"
 
 # Jailbreak Tools
 JailbreakMap = [
     {
         "name": "checkra1n",
         "url": "https://checkra.in",
-        "current_version": "0.12.2",
+        "current_version": "0.12.4 beta",
         "minimum_ios": "12.0",
         "minimum_pg": "5S",
         "maximum_ios": Gmaximum_ios,
@@ -17,43 +17,42 @@ JailbreakMap = [
     {
         "name": "Taurine",
         "url": "https://taurine.app",
-        "current_version": "1.0.4",
+        "current_version": "1.1.5",
         "minimum_ios": "14.0",
         "minimum_pg": "6S",
         "maximum_ios": "14.3",
         "maximum_pg": "12",
         "type": "Semi-Untethered",
-        "platforms": ['apple']
+        "platforms": ['apple','linux','windows']
     },
     {
         "name": "Odyssey",
         "url": "https://theodyssey.dev",
-        "current_version": "1.3.3",
+        "current_version": "1.4.2",
         "minimum_ios": "13.0",
         "maximum_ios": "13.7",
         "minimum_pg": "6S",
         "maximum_pg": "11",
         "type": "Semi-Untethered",
-        "platforms": ['apple']
+        "platforms": ['apple','linux','windows']
     },
     {
         "name": "unc0ver",
         "url": "https://unc0ver.dev",
-        "current_version": "6.1.2",
+        "current_version": "8.0.2",
         "minimum_ios": "11.0",
-        "maximum_ios": "14.3",
+        "maximum_ios": "14.8",
         "minimum_pg": "5S",
         "maximum_pg": "12",
         "type": "Semi-Untethered",
-        "platforms": ['apple'],
-        "notes": ["A12 Supported between 12.0 - 12.3 and 12.4 - 12.4.1"]
+        "platforms": ['apple','linux','windows'],
     },
     {
         "name": "Chimera",
         "url": "https://chimera.coolstar.org",
-        "current_version": "1.6.2",
+        "current_version": "1.6.4",
         "minimum_ios": "12.0",
-        "maximum_ios": "12.5.1",
+        "maximum_ios": "12.5.5",
         "minimum_pg": "5S",
         "maximum_pg": "XS",
         "type": "Semi-Untethered",
@@ -118,6 +117,18 @@ JailbreakMap = [
         "type": "Semi-Untethered",
         "platforms": ['apple'],
         "notes": ["Only for 64-bit devices"]
+    },
+    {
+        "name": "p0laris",
+        "url": "https://p0laris.dev/",
+        "current_version": "1.0.1",
+        "minimum_ios": "9.0",
+        "minimum_pg": "4S",
+        "maximum_ios": "10.3.4",
+        "maximum_pg": "4S",
+        "type": "Semi-Tethered",
+        "platforms": ['apple', 'linux','windows'],
+        "notes": [""]
     },
     {
         "name": "Pangu9",
